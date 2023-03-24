@@ -14,6 +14,7 @@ urlpatterns = [
     path("", include("apps.home.urls")),            # UI Kits Html files
     #path("", include('apps.urlshorten.urls'))
     path("courses/", include("apps.course.urls")),
+    path('tinymce/', include('tinymce.urls')),
 ]
 if settings.DEBUG:
     import debug_toolbar

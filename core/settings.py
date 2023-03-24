@@ -9,6 +9,7 @@ from unipath import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).parent
+print(BASE_DIR)
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -34,7 +35,8 @@ INSTALLED_APPS = [
    # 'apps.urlshorten.',
     'apps.accounts',
     'apps.course',
-    'debug_toolbar'
+    'debug_toolbar',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,6 @@ STATICFILES_DIRS = (
 
 #############################################################
 #############################################################
+TINYMCE_JS_URL = os.path.join(CORE_DIR, 'apps\\tinymce\js\\tinymce\\tinymce.min.js')
+print(TINYMCE_JS_URL)
+TINYMCE_COMPRESSOR = False                                               
